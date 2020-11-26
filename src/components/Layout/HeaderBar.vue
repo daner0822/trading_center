@@ -33,8 +33,9 @@
             </li>
              <li>
             <img src="../../assets/proList.png" alt="">
-            <router-link :to="{path:'/login'}"> <span> 产品列表</span></router-link>
-            </li> <li>
+            <router-link :to="{path:'/productList'}"> <span> 产品列表</span></router-link>
+            </li> 
+            <li>
             <img src="../../assets/proBooking.png" alt="">
             <router-link :to="{path:'/register'}"><span>产品预订</span></router-link>
             </li>
@@ -61,9 +62,12 @@
              <el-input placeholder="例如：邮轮、航线或目的地" class="search-input" v-model="input"></el-input>
              <div class="search-btn"> 
                <span>搜索</span>
-               
              </div>
            </div>
+           <div class="hot-search">
+             <span class="hot-search-title">热门搜索：</span>
+             <span class="hot-search-content"> 海洋光谱号、威尼斯号、日本、北欧、新西兰、盛世公主号、意大利</span>
+             </div>
          </div>
         </div>
       </div>
@@ -204,14 +208,17 @@ export default {
               
           }
           .search-input{
-            // width:60%;
-
             outline:none;
-            // margin-left:105px;
               border: 1px solid $bg-color;
               border-left: none;;
-
           }
+          }
+          .hot-search{
+            font-size: 14px;
+            margin: 10px  0 0 60px;
+            .hot-search-content{
+              color: #ba0d23;
+            }
           }
         }
       }

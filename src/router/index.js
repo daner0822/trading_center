@@ -5,13 +5,14 @@ Vue.use(Router)
 
 /* Layout */
 import LayOut from '@/views/LayOut'
-import login from '@/views/LayOut'
+import login from '@/views/productList'
 import register from '@/views/register'
+import productList from '@/views/productList'
 
 // 公共路由
 export const constantRoutes = [
   {
-    path: '/LayOut',
+    path: '/',
     name: 'LayOut',
     component: LayOut
   },  
@@ -24,6 +25,11 @@ export const constantRoutes = [
     path: '/register',
     name: 'register',
     component: register
+  },
+  {
+    path: '/productList',
+    name: 'productList',
+    component: productList
   },
 ]
 

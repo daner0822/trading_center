@@ -4,16 +4,21 @@
       <header-bar></header-bar>
       <!-- 主内容区域 -->
       <main-content></main-content>
+    <!-- <productList /> -->
+
   </div>
 </template>
 
 <script>
 import HeaderBar from "@/components/Layout/HeaderBar"
 import MainContent from "@/components/Layout/MainContent"
+import productList from '@/views/productList/index'
+
 export default {
   components: {
     HeaderBar,
     MainContent,
+    productList
   },
   data(){
     return {

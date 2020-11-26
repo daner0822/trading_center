@@ -27,20 +27,89 @@ import { getVoyageInfoList } from "@/api/voyage";
 export default {
   data() {
     return {
-      productList:[],
+      productList:[
+        {
+        id:0,
+        image:'../../../assets/logo.png',
+        routeSpeciesName:'，邮轮轮邮轮轮邮轮轮邮轮轮邮轮轮邮轮轮邮轮轮邮轮轮邮轮轮',
+        cruiseCompNameCn:'长江七号',
+        cruiseDre:'测试',
+        minPrice:'199'
+      },
+       {
+        id:1,
+        image:'',
+        routeSpeciesName:'',
+        cruiseCompNameCn:'',
+        cruiseDre:'',
+        minPrice:''
+      },
+       {
+        id:2,
+        image:'',
+        routeSpeciesName:'',
+        cruiseCompNameCn:'',
+        cruiseDre:'',
+        minPrice:''
+       },
+       {
+        id:3,
+        image:'',
+        routeSpeciesName:'',
+        cruiseCompNameCn:'',
+        cruiseDre:'',
+        minPrice:''
+       },
+         {
+        id:4,
+        image:'',
+        routeSpeciesName:'，邮轮轮邮轮轮邮轮轮邮轮轮邮轮轮邮轮轮邮轮轮邮轮轮邮轮轮',
+        cruiseCompNameCn:'长江七号',
+        cruiseDre:'测试',
+        minPrice:'199'
+      },
+       {
+        id:5,
+        image:'',
+        routeSpeciesName:'',
+        cruiseCompNameCn:'',
+        cruiseDre:'',
+        minPrice:''
+      },
+       {
+        id:6,
+        image:'',
+        routeSpeciesName:'',
+        cruiseCompNameCn:'',
+        cruiseDre:'',
+        minPrice:''
+       },
+       {
+        id:7,
+        image:'',
+        routeSpeciesName:'',
+        cruiseCompNameCn:'',
+        cruiseDre:'',
+        minPrice:''
+       }
+      ],
       cruiseDre:'',//邮轮描述
-      imgUrl:''
+      imgUrl:""
+
     };
   },
   methods:{
-  getList() {
+   getList() {
     const params={
       pageNum:1,
       pageSize:8
     }
       getVoyageInfoList(params).then(response => {
-        console.log(response.data,'--');
         this.productList = response.data
+        // response.data.forEach(item => {
+        //   this.imgUrl = "data:image/jpeg;base64," + item.image;
+        // });
+
       });
     },
   },
