@@ -38,10 +38,9 @@ export default {
   .main-content{
    
     .product{
-      height: 560px;
+      // height: 560px;
       width: 1200px;
       margin: 0 auto;
-      margin-bottom: 80px;
     }
      
 

@@ -15,10 +15,10 @@
                   <a :href="`/note/${ele.id}`" :title="ele.routeSpeciesName">{{ele.title}}</a>
                 </div>
                 <div
-                  class="news-content-li-right-c clearhidetwo"
+                  class="news-content-li-right-c clearhide"
                 >{{ele.routeSpeciesName}}</div>
                  <div
-                  class="news-content-li-right-c clearhidetwo"
+                  class="news-content-li-right-c clearhide"
                   :title="ele.routeSpeciesName"
                 >
                 <span style="color:#ba0d23;font-size:12px">¥</span>
@@ -67,7 +67,7 @@ export default {
       {
         id:3,
         imgUrl:'../../../assets/logo.png',
-        routeSpeciesName:'yogjkjggggggggggggggg',
+        routeSpeciesName:'yogjkjggggggggggggggggggggggggggggg',
         cruiseCompNameCn:'长江七号',
         cruiseDre:'测试',
         minPrice:'199'
@@ -141,59 +141,17 @@ export default {
               }
             }
             .news-content-li-right-c {
-              margin-top: 18px;
+              width: 140px;
+              margin-top: 20px;
               font-size: 12px;
               color: #666666;
-              line-height: 18px;
               position: relative;
             }
-            .price{
-              width: 100px;
-              height: 20px;
-              position: absolute;
-              top:50px;
-              right: 0;
-              .unit{
-                font-size: 14px;
-                color: #ba0d23;
-              }
-              .pri{
-                color: #ba0d23;
-                font-size: 28px;
-              }
-            }
-            .detail{
-              position: absolute;
-              bottom: 60px;
-              right: 0;
-            }
-            .sign {
-              position: absolute;
-              left: 10px;
-              bottom: 0;
-              width: 660px;
-              display: flex;
-              padding: 8px 0;
-              color: #999999;
-              .time {
-                display: flex;
-                margin-right: 50px;
-                line-height: 14px;
-                font-size: 12px;
-                .el-icon-time,
-                .el-icon-price-tag,
-                .el-icon-view {
-                  font-size: 14px;
-                  margin-right: 6px;
-                }
-              }
-            }
+         
           }
         }
       }
-      .notelist-news-latest {
-        width: 280px;
-      }
+   
     }
   }
 }

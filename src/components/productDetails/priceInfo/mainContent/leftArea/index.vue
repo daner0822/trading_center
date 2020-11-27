@@ -169,13 +169,14 @@ export default {
         background-color: #fff;
           width: 880px;
           padding: 20px 0;
-          padding-right: 20px;
+          // margin: 20px 0;
           display: flex;
-          margin-bottom: 10px;
+          // justify-content: space-between;
+          border-bottom: 1px solid #dddddd;
           .news-content-li-left {
             width: 200px;
             height: 160px;
-            padding: 20px;
+            padding-left: 20px;
             a {
               width: 100%;
               height: 100%;
@@ -211,18 +212,20 @@ export default {
               }
             }
             .news-content-li-right-c {
-              margin-top: 18px;
+              width: 580px;
+              margin-top: 15px;
               font-size: 12px;
               color: #666666;
               line-height: 18px;
               position: relative;
+              padding: 0 10px;
             }
             .price{
               width: 100px;
               height: 20px;
               position: absolute;
               top:50px;
-              right: 0;
+              right: 10px;
               .unit{
                 font-size: 14px;
                 color: #ba0d23;
@@ -271,5 +274,42 @@ export default {
     }
   }
 }
-
+.latestnews {
+  width: 280px;
+  .latestnews-title {
+    font-size: 14px;
+    color: #333333;
+    text-align: left;
+    line-height: 16px;
+    font-weight: 700;
+  }
+  .latestnews-content {
+    margin-top: 10px;
+    border-top: 1px solid #dddddd;
+    .latestnews-content-li {
+      display: flex;
+      margin-top: 10px;
+      justify-content: space-between;
+      line-height: 20px;
+      .number {
+        width: 20px;
+        height: 20px;
+        color: #ffffff;
+        background: #ff0100;
+        text-align: center;
+      }
+      a {
+        width: 250px;
+        font-size: 12px;
+        color: #666666;
+        text-align: left;
+      }
+    }
+    .latestnews-content-li:hover {
+      a {
+        color: #066eb7;
+      }
+    }
+  }
+}
 </style>

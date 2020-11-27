@@ -11,18 +11,46 @@
           </div>
         <div class="container">
          <ul class="cruise_comp_list">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li v-for="item in compList" :key="item.id">
+             <img :src="item.image" alt="">
+          </li>
         </ul>
         </div>
       </div>
 </template>
 
 <script>
-export default {
+import { cruiseCompInfolist } from "@/api/voyage";
 
+export default {
+  data(){
+    return{
+      compList:[]
+    }
+  },
+  methods:{
+   getList() {
+    const params={
+      pageNum:1,
+      pageSize:4,
+    }
+      cruiseCompInfolist(params).then(response => {
+        this.compList = response.data
+      });
+    },
+    changeLine(index) {
+      this.currentIndex = index;
+      if(this.currentIndex==0){
+        this.isAbroad=true
+      }else{
+        this.isAbroad=false
+      }
+      this.getList()
+    }
+  },
+  created(){
+    this.getList()
+  }
 }
 </script>
 
@@ -62,10 +90,13 @@ export default {
         .cruise_comp_list{
           margin-bottom: 20px;
           li{
-          float: left;
-          width: 298px;
-          height: 360px;
-          border: 1px solid $bg-color;
+            float: left;
+            img{
+              float: left;
+              width: 298px;
+              height: 360px;
+              border: 1px solid $bg-color;
+            }
           }
         }
         
